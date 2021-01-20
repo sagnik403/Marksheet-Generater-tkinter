@@ -35,10 +35,9 @@ def calc():
         grade1.insert(0,"C")
     elif (a>=40 and a<50):
         grade1.insert(0,"P")
-    # elif(str(m)=="" or str(p)=="" or str(c)=="" or str(t1.get())=="" or str(t2.get())=="" or str(t3.get())==""):
-    #     messagebox.showerror("Error", "Please Fill all the requirments")
     else:
         grade1.insert(0,"Fail")
+    
     
 def delete():
     math1.delete(0,'end')
@@ -84,6 +83,7 @@ def mg():
     draw.text(points8,avgm,"black",font=font1)
     draw.text(points9,gradem,"black",font=font1)
     image.save(rf'C:\Users\User\Desktop\marksheet generater\marksheets\{t1.get()}.png')
+    image.show()
 
 
 # ====================================================================================================================
@@ -91,6 +91,7 @@ def mg():
 win = Tk()
 win.title("Marksheet Generater")
 win.geometry("800x500")
+win.iconbitmap(r"C:\Users\Public\Pictures\Sample Pictures\Treetog-Junior-Monitor-desktop.ico")
 win.maxsize(800,500)
 win.minsize(800,500)
 win['bg'] = "dark orange"
